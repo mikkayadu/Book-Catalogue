@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+        
+</head>
+<body>
+    <h1>Books that contain <%=genre%></h1>
+    <% for(let book of books){ %>
+        <h2 >
+            <a href="/books/<%=book._id%>">
+                <%= book.name %>
+            </a>
+        </h2>
+
+        <a href="/books/<%=book._id%>/edit">Update book details</a>
+        <% } %>
+
+</body>
+</html>
